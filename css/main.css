@@ -85,7 +85,7 @@ header .button-container {
 
 /* Donation Page */
 #donation-page {
-  background: #00b5c2;
+  background: #fff;
   color: #003952; }
   #donation-page h1 {
     background: #a9cf38;
@@ -112,10 +112,12 @@ header .button-container {
         display: block; }
   #donation-page .donation-page-content-container {
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
+    #donation-page .donation-page-content-container img {
+      width: 100%; }
     #donation-page .donation-page-content-container .donation-container {
       display: flex;
       flex-direction: column;
@@ -123,6 +125,7 @@ header .button-container {
       align-items: center; }
     #donation-page .donation-page-content-container h2 {
       font-weight: 400;
+      line-height: 2rem;
       text-transform: none;
       padding: 20px 0px; }
     #donation-page .donation-page-content-container .faq-container {
@@ -168,15 +171,18 @@ header .button-container {
 
 @media screen and (min-width: 992px) {
   /* Donation Page */
-  #donation-page .donation-page-content-container .donation-container {
-    width: 400px !important; }
-  #donation-page .donation-page-content-container .faq-and-desc {
-    width: 100%; }
-    #donation-page .donation-page-content-container .faq-and-desc h2 {
-      padding-bottom: 20px; }
-    #donation-page .donation-page-content-container .faq-and-desc h1 {
-      background: none;
-      padding: 10px 0px; }
+  #donation-page .donation-page-content-container {
+    display: flex;
+    flex-direction: row; }
+    #donation-page .donation-page-content-container .donation-container {
+      width: 400px !important; }
+    #donation-page .donation-page-content-container .faq-and-desc {
+      width: 100%; }
+      #donation-page .donation-page-content-container .faq-and-desc h2 {
+        padding-bottom: 20px; }
+      #donation-page .donation-page-content-container .faq-and-desc h1 {
+        background: none;
+        padding: 10px 0px; }
   #donation-page .content-wrapper h2 {
     font-size: 2rem;
     line-height: 2rem;
