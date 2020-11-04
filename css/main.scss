@@ -1,0 +1,244 @@
+/* Fonts & Colors */ 
+@import "colors";
+@import "fonts";
+@import "variables";
+@import "mixins";
+/* Universal Styles */ 
+body {
+  background: $dark-blue;
+  color: #fff;
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.35rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+h2, h4 {
+  font-weight: 400;
+}
+.content-wrapper {
+  @include body-content-wrapper;
+}
+.button-container {
+  @include button-container;
+}
+main {
+  a:link,
+  a:visited {
+    color: $dark-blue;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      border-bottom: 2px solid $lime-green;
+    }
+  }
+}
+header {
+    .button-container {
+        @include button-container;
+        margin: 20px 0px;
+      .rounded-blue-button {
+        @include body-blue-button;
+      }
+      .rounded-green-button {
+        @include body-green-button;
+      }
+    }
+}
+/* Donation Page */
+#donation-page {
+  @include page-header;
+  background: $light-blue;
+  color: $dark-blue;
+  .donation-span {
+    height: 300px;
+    background: top no-repeat url("../img/about-hero.png");
+    background-size: cover;
+    h1 {
+      background: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding-top: 175px;
+      span {
+        color: #fff;
+        display: block;
+      }
+    }
+  }
+  .donation-page-content-container {
+    margin: 0 auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .donation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      font-weight: 400;
+      text-transform: none;
+      padding: 20px 0px;
+    }
+    .faq-container {
+      padding: 20px;
+      /* button used to open the question */
+      .accordion {
+        background: $lime-green;
+        color: $dark-blue;
+        cursor: pointer;
+        font-family: $heading-font;
+        font-weight: 700;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      /* add a background to the question if it's clicked on & when you move the mouse over it */
+      .active,
+      .accordion:hover {
+        background: #fff;
+        color: $dark-blue;
+      }
+      .accordion:after {
+        content: "\02795";
+        font-size: 13px;
+        color: $dark-blue !important;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2796";
+        color: $dark-blue !important;
+      }
+      /* style the accordion panel; hidden by default */
+      .panel {
+        background: #fff;
+        padding: 0 18px;
+        color: $dark-blue;
+        display: none;
+        overflow: hidden;
+      }
+    }
+    .employee-match {
+      .button-container {
+        padding: 0px 20px;
+        .rounded-green-button {
+          &:hover {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  /* Donation Page */
+  #donation-page {
+    .donation-page-content-container {
+      .donation-container {
+        width: 400px !important;
+      }
+      .faq-and-desc {
+        width: 100%;
+        h2 {
+          padding-bottom: 20px;
+        }
+        h1 {
+          background: none;
+          padding: 10px 0px;
+        }
+      }
+    }
+    .content-wrapper {
+      h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        min-width: 700px;
+        max-width: 710px;
+        margin: 0 auto;
+      }
+      .donation-container {
+        margin: 0 auto;
+        padding-left: 60px;
+      }
+    }
+  }
+}
+/* Footer */ 
+footer {
+    background: $dark-blue;
+    color: #fff;
+    .content-wrapper {
+      padding: 25px 0px;
+    }
+    .text-logo {
+      margin: 20px 20px;
+    }
+    h5 {
+      color: $lime-green;
+      font-size: 1rem;
+      line-height: 1rem;
+      text-align: left;
+      padding: 10px 0px;
+      span {
+        display: block;
+      }
+    }
+    h6 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: left;
+    }
+    p {
+      font-size: .90rem;
+      margin: 8px 0px;
+    }
+    i {
+      margin-right: 10px;
+    }
+    .social-media {
+      text-decoration: none;
+      a:link,
+      a:visited {
+        color: $light-blue;
+      }
+      a:hover {
+        color: $lime-green;
+        transition: $color-transition;
+      }
+    }
+    .navigation {
+      h6 {
+        padding: 10px 0px;
+      }
+      line-height: 1rem;
+      p {
+        margin: 0px;
+      }
+      a:link,
+      a:visited {
+        color: #fff;
+        font-size: .75rem;
+        text-decoration: none;
+      }
+      a:hover {
+        color: $lime-green;
+        transition: $color-transition;
+      }
+    }
+    img {
+      display: flex;
+      margin: auto;
+      width: 200px;
+    }
+  }

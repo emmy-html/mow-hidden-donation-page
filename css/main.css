@@ -1,3 +1,241 @@
+/* Fonts & Colors */
+@font-face {
+  font-family: Lato;
+  src: url(/fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Regular.ttf); }
+/* Transitions */
+/* Universal Styles */
+body {
+  background: #003952;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.35rem; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center; }
+
+h2, h4 {
+  font-weight: 400; }
+
+.content-wrapper {
+  margin: 20px; }
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+  .button-container a:link,
+  .button-container a:visited {
+    color: #003952;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .button-container a:link:hover,
+    .button-container a:visited:hover {
+      border-bottom: none; }
+
+main a:link,
+main a:visited {
+  color: #003952;
+  text-decoration: none;
+  font-weight: 600; }
+  main a:link:hover,
+  main a:visited:hover {
+    border-bottom: 2px solid #a9cf38; }
+
+header .button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0px; }
+  header .button-container a:link,
+  header .button-container a:visited {
+    color: #003952;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase; }
+    header .button-container a:link:hover,
+    header .button-container a:visited:hover {
+      border-bottom: none; }
+  header .button-container .rounded-blue-button {
+    background: #00b5c2;
+    border-radius: 5px;
+    padding: 5px 15px; }
+    header .button-container .rounded-blue-button:hover {
+      background: #a9cf38;
+      transition: 1s background; }
+  header .button-container .rounded-green-button {
+    background: #a9cf38;
+    border-radius: 5px;
+    border-bottom: none;
+    padding: 5px 15px; }
+    header .button-container .rounded-green-button:hover {
+      background: #00b5c2;
+      transition: 1s background; }
+
+/* Donation Page */
+#donation-page {
+  background: #00b5c2;
+  color: #003952; }
+  #donation-page h1 {
+    background: #a9cf38;
+    color: #003952;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 20px 0px;
+    margin: 0 auto;
+    width: 100%; }
+    #donation-page h1 span {
+      color: #003952; }
+  #donation-page .donation-span {
+    height: 300px;
+    background: top no-repeat url("../img/about-hero.png");
+    background-size: cover; }
+    #donation-page .donation-span h1 {
+      background: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding-top: 175px; }
+      #donation-page .donation-span h1 span {
+        color: #fff;
+        display: block; }
+  #donation-page .donation-page-content-container {
+    margin: 0 auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    #donation-page .donation-page-content-container .donation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    #donation-page .donation-page-content-container h2 {
+      font-weight: 400;
+      text-transform: none;
+      padding: 20px 0px; }
+    #donation-page .donation-page-content-container .faq-container {
+      padding: 20px;
+      /* button used to open the question */
+      /* add a background to the question if it's clicked on & when you move the mouse over it */
+      /* style the accordion panel; hidden by default */ }
+      #donation-page .donation-page-content-container .faq-container .accordion {
+        background: #a9cf38;
+        color: #003952;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s; }
+      #donation-page .donation-page-content-container .faq-container .active,
+      #donation-page .donation-page-content-container .faq-container .accordion:hover {
+        background: #fff;
+        color: #003952; }
+      #donation-page .donation-page-content-container .faq-container .accordion:after {
+        content: "\02795";
+        font-size: 13px;
+        color: #003952 !important;
+        float: right;
+        margin-left: 5px; }
+      #donation-page .donation-page-content-container .faq-container .active:after {
+        content: "\2796";
+        color: #003952 !important; }
+      #donation-page .donation-page-content-container .faq-container .panel {
+        background: #fff;
+        padding: 0 18px;
+        color: #003952;
+        display: none;
+        overflow: hidden; }
+    #donation-page .donation-page-content-container .employee-match .button-container {
+      padding: 0px 20px; }
+      #donation-page .donation-page-content-container .employee-match .button-container .rounded-green-button:hover {
+        background: #fff; }
+
+@media screen and (min-width: 992px) {
+  /* Donation Page */
+  #donation-page .donation-page-content-container .donation-container {
+    width: 400px !important; }
+  #donation-page .donation-page-content-container .faq-and-desc {
+    width: 100%; }
+    #donation-page .donation-page-content-container .faq-and-desc h2 {
+      padding-bottom: 20px; }
+    #donation-page .donation-page-content-container .faq-and-desc h1 {
+      background: none;
+      padding: 10px 0px; }
+  #donation-page .content-wrapper h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    min-width: 700px;
+    max-width: 710px;
+    margin: 0 auto; }
+  #donation-page .content-wrapper .donation-container {
+    margin: 0 auto;
+    padding-left: 60px; } }
+/* Footer */
+footer {
+  background: #003952;
+  color: #fff; }
+  footer .content-wrapper {
+    padding: 25px 0px; }
+  footer .text-logo {
+    margin: 20px 20px; }
+  footer h5 {
+    color: #a9cf38;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: left;
+    padding: 10px 0px; }
+    footer h5 span {
+      display: block; }
+  footer h6 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: left; }
+  footer p {
+    font-size: .90rem;
+    margin: 8px 0px; }
+  footer i {
+    margin-right: 10px; }
+  footer .social-media {
+    text-decoration: none; }
+    footer .social-media a:link,
+    footer .social-media a:visited {
+      color: #00b5c2; }
+    footer .social-media a:hover {
+      color: #a9cf38;
+      transition: 1s color; }
+  footer .navigation {
+    line-height: 1rem; }
+    footer .navigation h6 {
+      padding: 10px 0px; }
+    footer .navigation p {
+      margin: 0px; }
+    footer .navigation a:link,
+    footer .navigation a:visited {
+      color: #fff;
+      font-size: .75rem;
+      text-decoration: none; }
+    footer .navigation a:hover {
+      color: #a9cf38;
+      transition: 1s color; }
+  footer img {
+    display: flex;
+    margin: auto;
+    width: 200px; }
 
 /*# sourceMappingURL=main.css.map */
